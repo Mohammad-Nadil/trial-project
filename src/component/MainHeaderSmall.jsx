@@ -92,7 +92,7 @@ const MainHeaderSmall = () => {
             {menu ? <IoClose /> : <FaBars />}
           </button>
           <ul
-            className={`absolute top-full right-0 w-full sm:w-1/2 z-50 bg-[#252525] flex flex-col duration-300 ${
+            className={`absolute top-full right-0 w-full sm:w-1/2 z-50 bg-[#252525] flex flex-col duration-300 overflow-y-auto scroll-y-auto scrollbar-hide ${
               menu ? " opacity-100 visible" : "opacity-0 invisible"
             } `}
           >
