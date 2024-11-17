@@ -13,9 +13,9 @@ const Banner = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 200,
+    speed: 100,
     fade: true,
-    autoplaySpeed: 200,
+    autoplaySpeed: 2000,
     cssEase: "linear",
   };
 
