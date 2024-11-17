@@ -7,35 +7,45 @@ import { motion } from "framer-motion";
 const History = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5 }}
     >
-      <Container className="pt-32 flex">
+      <Container className="lg:pt-32  flex gap-y-10 items-center flex-col-reverse lg:flex-row">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.7, ease: "easeInOut" }}
-          className="left w-1/2"
+          whileInView={{ x: 0, opacity: 1 }}
+          className="left lg:w-1/2"
         >
           <img src={history} alt={history} />
         </motion.div>
         <motion.div
           initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7, ease: "easeInOut", delay: 0.2 }}
-          className="right w-1/2 flex flex-col gap-y-9 pl-9 pt-6"
+          className="right lg:w-1/2 flex flex-col gap-y-4 lg:gap-y-9 lg:pl-9 pt-6"
         >
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5, ease: "easeOut", delay: 0.4 }}
             className="text flex flex-col gap-y-4 text-[#2B2B2B] font-inter"
           >
-            <h2 className="font-bold text-[2rem] leading-[2.4375rem]">
+            <motion.h2
+              initial={{ opacity: 0, y: -100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 1, ease: "easeOut" }}
+              className="font-bold text-[2rem] leading-[2.4375rem]"
+            >
               History and Achievements
-            </h2>
-            <p className="leading-8">
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+              className="leading-8"
+            >
               Work for a Better Bangladesh (WBB) Trust was founded in December
               1998. The initial programs of WBB Trust were tobacco control and
               environment (discouraging polythene shopping bags and addressing
@@ -45,11 +55,11 @@ const History = () => {
               broader focus on non-communicable diseases. Our environment work
               is now subsumed under Livable Cities, with a focus on urban
               environments.Details
-            </p>
+            </motion.p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
             className="link"
           >
