@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const CustomBtn = ({ text, className }) => {
+const CustomBtn = ({ text, className , href }) => {
   return (
     <motion.button
       whileHover={{
@@ -19,7 +19,7 @@ const CustomBtn = ({ text, className }) => {
       transition={{ duration: 0.4, ease: "easeInOut" }}
       className={`${className} border text-[#008645] border-[#008645] p-2.5 font-inter font-bold text-2xl leading-7`}
     >
-      <Link>{text}</Link>
+      <Link to={href} >{text}</Link>
     </motion.button>
   );
 };

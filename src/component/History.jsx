@@ -12,7 +12,7 @@ const History = () => {
     viewport={{ once: true }}
     transition={{ duration: 0.5 }}
     >
-      <Container className="lg:pt-32  flex gap-y-10 items-center flex-col-reverse lg:flex-row">
+      <Container className="xl:pt-32 md:pt-16 flex gap-y-10 items-center flex-col-reverse lg:flex-row">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -63,7 +63,7 @@ const History = () => {
             transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
             className="link"
           >
-            <CustomBtn text="Details" />
+            <CustomBtn text="Details" href="" />
           </motion.div>
         </motion.div>
       </Container>
