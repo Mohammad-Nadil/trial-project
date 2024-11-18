@@ -15,7 +15,7 @@ const HighP = ({ text }) => {
 
 const Research = () => {
   return (
-    <div className="xl:pt-32 md:pt-24 pt-16">
+    <div className="xl:pt-32 md:pt-24 pt-16 overflow-x-hidden">
       <HeadingText text="Research & Publication" />
       <Container className="flex lg:p-0">
         <div className="leaf p-5 lg:p-0 w-full lg:w-1/2 flex flex-col xl gap-y-10 2xl:gap-y-16 ">
