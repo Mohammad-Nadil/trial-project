@@ -11,7 +11,7 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`absolute bottom-full right-0  -translate-y-full text-primary  ${className}`}
+      className={`absolute bottom-full   right-0  -translate-y-full text-primary  ${className}`}
       onClick={onClick}
     >
       <FaArrowRightLong className="text-3xl" />
@@ -61,12 +61,16 @@ const MediaSlider = () => {
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <div className="slider-container ">
+    <div className="slider-container overflow-hidden ">
       <HeadingText text="Articles" className="py-6" />
       <Slider {...settings}>
         {items.map((item, index) => (
           <div key={index}>
-            <SliderCard className="border-none" image={item.image} text={item.text} />
+            <SliderCard
+              className="border-none w-[80vw] sm:w-auto"
+              image={item.image}
+              text={item.text}
+            />
           </div>
         ))}
       </Slider>

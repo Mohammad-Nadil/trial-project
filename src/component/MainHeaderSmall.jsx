@@ -80,7 +80,7 @@ const MainHeaderSmall = () => {
 
   return (
     <div>
-      <Container className="bg-black flex justify-between items-center py-2">
+      <Container className="bg-black flex justify-between items-center py-2 px-3 xl:px-0">
         <div className="logo w-1/2 sm:w-1/3">
           <img className=" w-full aspect-[335/100]" src={logo} alt={logo} />
         </div>

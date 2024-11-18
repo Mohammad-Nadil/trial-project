@@ -17,7 +17,7 @@ const SliderCard = ({ className, href, text, image }) => {
         <div className="absolute w-[89.23%] opacity-0 duration-300 h-full top-0 left-0 group-hover:opacity-100 border-b border-b-[#008645] z-50 mx-6"></div>
       </div>
       <div className="bg-black h-1/3 px-6 flex flex-col justify-evenly md:justify-around">
-        <p className="text-white font-bold text-base md:text-xl lg:text-2xl xl:text-base  font-inter">
+        <p className="text-white font-bold text-base  lg:text-2xl xl:text-base  font-inter">
           {text}
         </p>
         <div

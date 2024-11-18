@@ -17,7 +17,7 @@ const Research = () => {
   return (
     <div className="xl:pt-32 md:pt-24 pt-16 overflow-x-hidden">
       <HeadingText text="Research & Publication" />
-      <Container className="flex lg:p-0">
+      <Container className="flex px-3 xl:px-0 xl:p-0">
         <div className="leaf p-5 lg:p-0 w-full lg:w-1/2 flex flex-col xl gap-y-10 2xl:gap-y-16 ">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
