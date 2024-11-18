@@ -5,6 +5,7 @@ import Container from "./layer/Container";
 import sliderCardPic1 from "../assets/celebrate.png";
 import sliderCardPic2 from "../assets/lgd.png";
 import sliderCardPic3 from "../assets/oldDhaka.png";
+import HeadingText from "./layer/HeadingText";
 
 const ActivitySlider = () => {
   let settings = {
@@ -21,24 +22,23 @@ const ActivitySlider = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1450,
+        breakpoint: 1500,
         settings: {
           dots: false,
           arrows: false,
           slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
-          className: "center",
           centerMode: false,
         },
       },
       {
-        breakpoint: 1281,
+        breakpoint: 1280,
         settings: {
           dots: false,
           arrows: false,
-          slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToShow: 3,
+          slidesToScroll: 2,
           infinite: true,
           centerMode: false,
         },
@@ -87,32 +87,56 @@ const ActivitySlider = () => {
     ],
   };
   return (
-    <div className="xl:py-32 md:pt-24 pt-16 overflow-hidden " >
-      <Container><h2 className="text-primary font-bold font-inter text-4xl py-10 px-3">Activity</h2></Container>
+    <div className="xl:py-32 md:pt-24 pt-16 overflow-hidden ">
+      <HeadingText text="Activity" />
       <Slider {...settings}>
         <div>
-          <SliderCard image={sliderCardPic1} text="Work for a Better Bangladesh Trust celebrates 25 years" />
+          <SliderCard
+            image={sliderCardPic1}
+            text="Work for a Better Bangladesh Trust celebrates 25 years"
+          />
         </div>
         <div>
-          <SliderCard image={sliderCardPic2} text="A call to make farmers' markets permanent under the urban food desk of the LGD" />
+          <SliderCard
+            image={sliderCardPic2}
+            text="A call to make farmers' markets permanent under the urban food desk of the LGD"
+          />
         </div>
         <div>
-          <SliderCard image={sliderCardPic3} text="Inauguration of mobile playground for children in Old Dhaka" />
+          <SliderCard
+            image={sliderCardPic3}
+            text="Inauguration of mobile playground for children in Old Dhaka"
+          />
         </div>
         <div>
-          <SliderCard image={sliderCardPic1} text="Work for a Better Bangladesh Trust celebrates 25 years" />
+          <SliderCard
+            image={sliderCardPic1}
+            text="Work for a Better Bangladesh Trust celebrates 25 years"
+          />
         </div>
         <div>
-          <SliderCard image={sliderCardPic2} text="A call to make farmers' markets permanent under the urban food desk of the LGD" />
+          <SliderCard
+            image={sliderCardPic2}
+            text="A call to make farmers' markets permanent under the urban food desk of the LGD"
+          />
         </div>
         <div>
-          <SliderCard image={sliderCardPic3} text="Inauguration of mobile playground for children in Old Dhaka" />
+          <SliderCard
+            image={sliderCardPic3}
+            text="Inauguration of mobile playground for children in Old Dhaka"
+          />
         </div>
         <div>
-          <SliderCard image={sliderCardPic1} text="Work for a Better Bangladesh Trust celebrates 25 years" />
+          <SliderCard
+            image={sliderCardPic1}
+            text="Work for a Better Bangladesh Trust celebrates 25 years"
+          />
         </div>
         <div>
-          <SliderCard image={sliderCardPic2} text="A call to make farmers' markets permanent under the urban food desk of the LGD" />
+          <SliderCard
+            image={sliderCardPic2}
+            text="A call to make farmers' markets permanent under the urban food desk of the LGD"
+          />
         </div>
       </Slider>
     </div>

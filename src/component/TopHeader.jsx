@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Container from "./layer/Container";
 import { Link } from "react-router-dom";
 
@@ -11,25 +12,52 @@ const TopHeader = () => {
   ];
 
   return (
-    <div className="top bg-primary">
-      <Container className="flex flex-col sm:flex-row items-center justify-between py-2 sm:py-4">
-        <div className="text text-white font-inter">
-          <p className="font-bold  lg:text-xl">Change Needs Social Movement</p>
-        </div>
-        <div className="link">
+    <motion.div
+      className="top bg-primary"
+    >
+      <Container className="flex flex-col sm:flex-row items-center justify-between py-2 sm:py-4 px-3 xl:px-0">
+
+        <motion.div
+          className="text text-white font-inter"
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <p className="font-bold lg:text-xl">Change Needs Social Movement</p>
+        </motion.div>
+        <motion.div
+          className="link"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                delay:1,
+                staggerChildren: 0.4,
+                delayChildren: 0.4, 
+              },
+            },
+          }}
+        >
           <ul className="flex gap-x-1.5">
             {links.map((item, index) => (
-              <li
-                className={` text-xs sm:text-sm font-inter text-white relative transition-all duration-300`}
+              <motion.li
+                className={`text-xs sm:text-sm font-inter text-white relative transition-all duration-300`}
                 key={index}
+                variants={{
+                  hidden: { opacity: 0, y: -20 },
+                  visible: { opacity: 1, y: 0 },
+                }}
               >
                 <Link to={item.link}>{item.text}</Link>
-              </li>
+              </motion.li>
             ))}
           </ul>
-        </div>
+        </motion.div>
       </Container>
-    </div>
+    </motion.div>
   );
 };
 
