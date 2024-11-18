@@ -15,7 +15,7 @@ const Banner = () => {
     autoplay: true,
     speed: 1000,
     fade: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2500,
     cssEase: "linear",
   };
 

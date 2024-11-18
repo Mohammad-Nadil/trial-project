@@ -1,13 +1,10 @@
-/* Neumorphism styling */
-
-@media (min-width: 320px) {
-  .after-bg {
-    background-image: url('./assets/research.png'); 
-    background-size: cover;
-    background-position: center;
-    backdrop-filter: blur(20px); 
-  }
+.media-bg {
+  background-image: url('./assets/articleBg.png'); 
+  background-size: cover;
+  background-position: center;
 }
+
+/* Neumorphism styling */
 @media (min-width: 320px) and (max-width: 1279px) {
   .morph li {
     background: #252525;
