@@ -7,7 +7,7 @@ import { motion } from "framer-motion"; // Import Framer Motion
 
 const HighP = ({ text }) => {
   return (
-    <p className="font-inter font-bold text-lg sm:text-2xl xl:text-3xl  2xl:text-[2.125rem] sm:leading-10 py-2.5 px-3.5 bg-[#E7E7E7]/50">
+    <p className="font-inter font-bold text-lg sm:text-2xl xl:text-3xl  2xl:text-[2.125rem] leading-6 sm:leading-10 py-2.5 px-3.5 bg-[#E7E7E7]/50">
       {text}
     </p>
   );
@@ -15,10 +15,10 @@ const HighP = ({ text }) => {
 
 const Research = () => {
   return (
-    <div>
+    <div className="xl:pt-32 md:pt-24 pt-16">
       <HeadingText text="Research & Publication" />
       <Container className="flex lg:p-0">
-        <div className="leaf p-5 lg:p-0 w-full lg:w-1/2 flex flex-col xl gap-y-10 2xl:gap-y-16">
+        <div className="leaf p-5 lg:p-0 w-full lg:w-1/2 flex flex-col xl gap-y-10 2xl:gap-y-16 ">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -29,7 +29,7 @@ const Research = () => {
             <h2 className="font-inter font-bold text-[2.0625rem] leading-10 w-96">
               WBB's Twenty Years Celebrating Book
             </h2>
-            <p className="font-inter">
+            <p className="font-inter text-sm sm:text-base">
               It started with a simple idea: everyone has something that they
               can contribute to make their country better. Let’s encourage
               people to play a positive role. In the beginning, back in 1998,

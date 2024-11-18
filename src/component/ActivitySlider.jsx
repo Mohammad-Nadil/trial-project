@@ -87,7 +87,7 @@ const ActivitySlider = () => {
     ],
   };
   return (
-    <div className="xl:py-32 md:pt-24 pt-16 overflow-hidden ">
+    <div className="xl:pt-32 md:pt-24 pt-16 overflow-hidden ">
       <HeadingText text="Activity" />
       <Slider {...settings}>
         <div>
