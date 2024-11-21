@@ -79,27 +79,42 @@ const Research = () => {
     <div className="xl:pt-32 md:pt-24 pt-16 overflow-x-hidden">
       <HeadingText text="Research & Publication" />
       <Container className="flex px-3 xl:px-0 xl:p-0">
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="leaf p-5 lg:p-0 w-full lg:w-1/2 flex flex-col xl gap-y-10 2xl:gap-y-16"
-        >
-          {accordions.map((accordion) => (
-            <Accordion
-              key={accordion.id}
-              id={accordion.id}
-              title={accordion.title}
-              text={accordion.text}
-              isOpen={activeAccordion === accordion.id}
-              onToggle={handleToggle}
-            />
-          ))}
-          <div>
-            <CustomBtn text="View All" className="font-normal !bg-white/50" />
-          </div>
-        </motion.div>
+      <motion.div
+  initial={{ opacity: 0, y: 100 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.5 }}
+  viewport={{ once: true }}
+  className="leaf p-5 lg:p-0 w-full lg:w-1/2 flex flex-col xl gap-y-10 2xl:gap-y-16"
+>
+  {accordions.map((accordion, index) => (
+    <motion.div
+      key={accordion.id}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.5,
+        delay: 0.5 + index * 0.3, // Adding stagger delay manually
+      }}
+      viewport={{ once: true }}
+    >
+      <Accordion
+        id={accordion.id}
+        title={accordion.title}
+        text={accordion.text}
+        isOpen={activeAccordion === accordion.id}
+        onToggle={handleToggle}
+      />
+    </motion.div>
+  ))}
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: 0.5 + accordions.length * 0.3 }}
+    viewport={{ once: true }}
+  >
+    <CustomBtn text="View All" className="font-normal !bg-white/50" />
+  </motion.div>
+</motion.div>
         <motion.div className="right absolute h-full w-full -z-10 lg:static lg:w-1/2 blur-[3px] lg:blur-none">
           <motion.div
             initial={{ opacity: 0, x: 100 }}
