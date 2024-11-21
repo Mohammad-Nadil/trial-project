@@ -23,10 +23,10 @@ const Banner = () => {
   let imgs = [slider1, slider3];
 
   return (
-    <div className=" relative overflow-hidden">
+    <div className=" relative w-screen !overflow-x-hidden">
       <Slider {...settings}>
         {imgs.map((item) => (
-          <div className="div !w-screen aspect-[1920/920]">
+          <div className="div w-screen aspect-[1920/920]">
             <img
               className="w-full h-full object-cover object-center"
               src={item}
@@ -34,7 +34,7 @@ const Banner = () => {
             />
           </div>
         ))}
-        <div className="div !w-screen aspect-[1920/920]">
+        <div className="div w-screen aspect-[1920/920]">
           <img
             className="w-full h-full object-cover object-center"
             src={slider2}
@@ -52,7 +52,7 @@ const Banner = () => {
               </p>
             </div>
           </div>
-          <div className=" right absolute w-full sm:w-1/2 h-full  top-0 right-0 flex justify-center items-center">
+          <div className=" right absolute w-full sm:w-1/2 h-full  top-0 left-1/2 flex justify-center items-center">
             <div className=" w-10/12 sm:w-11/12 aspect-video flex flex-col gap-y-8  py-3 px-5">
               <iframe
               className="w-full h-full rounded-2xl  "
