@@ -9,7 +9,7 @@ export default {
       },
     },
     fontFamily: {
-      inter: ['"Inter"', "sans-serif"],
+      inter: ['"Inter Tight"', "sans-serif"],
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],

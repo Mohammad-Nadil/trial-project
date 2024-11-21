@@ -63,13 +63,13 @@ const Media = () => {
     <div className="media-bg mt-80">
       <Container className="px-3 xl:px-0 py-14 flex flex-col lg:flex-row">
         <motion.div
-          className="left w-full lg:w-1/2 aspect-square sm:aspect-video lg:aspect-auto relative"
+          className="left w-full lg:w-1/2 aspect-[9/10]  sm:aspect-video lg:aspect-auto relative"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <div className="w-[466px] aspect-[466/552] absolute top-0 -translate-y-1/3">
+          <div className=" w-72 sm:w-[466px] aspect-[466/552] absolute top-0 -translate-y-1/3">
             <MediaSlider />
           </div>
         </motion.div>

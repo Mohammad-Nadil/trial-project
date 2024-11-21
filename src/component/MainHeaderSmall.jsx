@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Container from "./layer/Container";
 import { Link } from "react-router-dom";
-import logo from "/logo.svg";
+import logo from "/logo.png";
 import { FaAngleDown, FaBars } from "react-icons/fa";
 import "../App.css";
 import { IoClose } from "react-icons/io5";

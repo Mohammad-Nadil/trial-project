@@ -1,19 +1,23 @@
 import React, { useState } from "react";
 import Container from "./layer/Container";
 import { Link } from "react-router-dom";
-import logo from "/logo.svg";
+import logo from "/logo.png";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 import "../App.css";
 
 const Li = ({ text, href, children, className, icon, onClick, linkClass }) => {
   return (
     <li
+      onClick={onClick}
       className={`text-[13.5px] font-inter text-white relative transition-all duration-300  ${className}`}
-     
     >
-      <Link to={href} className={` ${linkClass}`}>
-        {children} <p  onClick={onClick} className="py-2 px-2.5 flex items-center gap-x-0.5">{text} {icon}</p>
+      <Link
+        to={href}
+        className={` py-2 px-2.5 flex items-center gap-x-2 ${linkClass}`}
+      >{text} {icon}
+        
       </Link>
+      {children}
     </li>
   );
 };
@@ -49,7 +53,6 @@ const MainHeader = () => {
     internships: "/",
     volunteering: "/",
     news: "/",
-    publications: "/",
     support: "/",
     ourNetwork: "/",
     nationalNetwork: "/",
@@ -67,9 +70,9 @@ const MainHeader = () => {
   return (
     <>
       <div className="main bg-black">
-        <Container className="flex justify-between items-center py-3">
-          <div className="logo w-[19.5%]">
-            <img className=" w-full aspect-[335/100]" src={logo} alt={logo} />
+        <Container className="flex justify-between items-center px-3  py-3">
+          <div className="logo">
+            <img className=" w-full " src={logo} alt={logo} />
           </div>
           <div className="menu morph">
             <ul className={` xl:flex  gap-x-1`}>
@@ -83,7 +86,7 @@ const MainHeader = () => {
                 onClick={() => toggleDropdown("whatWeDo")}
               >
                 <ul
-                  className={`absolute w-60 top-full bg-[#202020] rounded-md   duration-300 flex flex-col gap-y-2 z-50 p-2 ${
+                  className={`absolute w-60 top-full bg-[#202020ee] rounded-md   duration-300 flex flex-col gap-y-2 z-50 p-2 ${
                     activeDropdown === "whatWeDo"
                       ? "visible opacity-100"
                       : "invisible opacity-0"
@@ -93,10 +96,10 @@ const MainHeader = () => {
                     text="Health Rights  "
                     icon={<FaAngleRight />}
                     href={links.healthRights}
-                    className="!p-3 group"
+                    className=" group"
                     linkClass="gap-x-3"
                   >
-                    <ul className="absolute w-60 top-0 left-full translate-x-2 bg-[#202020] rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible hover:visible hover:opacity-100 duration-300 flex flex-col gap-y-2 z-50 p-2">
+                    <ul className="absolute w-60 top-0 left-full translate-x-2 bg-[#202020ee] rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible hover:visible hover:opacity-100 duration-300 flex flex-col gap-y-2 z-50 p-2">
                       <Li text="Health Policy" href={links.healthPolicy} />
                       <Li
                         text="Non-Communicable Diseases (NCD)"
@@ -109,10 +112,10 @@ const MainHeader = () => {
                     text="Economic & Social Justice"
                     href={links.economicSocialJustice}
                     icon={<FaAngleRight />}
-                    className="!p-3 group"
+                    className=" group"
                     linkClass="gap-x-3"
                   >
-                    <ul className="absolute w-60 top-0 left-full translate-x-2 bg-[#202020] rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible hover:visible hover:opacity-100 duration-300 flex flex-col gap-y-2 z-50 p-2">
+                    <ul className="absolute w-60 top-0 left-full translate-x-2 bg-[#202020ee] rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible hover:visible hover:opacity-100 duration-300 flex flex-col gap-y-2 z-50 p-2">
                       <Li text="Ensure Our Rights" href={links.ensureRights} />
                       <Li text="Gender" href={links.gender} />
                     </ul>
@@ -121,27 +124,30 @@ const MainHeader = () => {
                     text="Livable cities"
                     href={links.livableCities}
                     icon={<FaAngleRight />}
-                    className="!p-3 group"
+                    className=" group"
                     linkClass="gap-x-3"
                   >
-                    <ul className="absolute w-60 top-0 left-full translate-x-2 bg-[#202020] rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible hover:visible hover:opacity-100 duration-300 flex flex-col gap-y-2 z-50 p-2">
+                    <ul className="absolute w-60 top-0 left-full translate-x-2 bg-[#202020ee] rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible hover:visible hover:opacity-100 duration-300 flex flex-col gap-y-2 z-50 p-2">
                       <Li text="Environment" href={links.environment} />
                       <Li text="Urban Structure" href={links.urbanStructure} />
                       <Li
                         text="Healthy and Safe Travel"
                         href={links.healthyTravel}
                       />
-                      <Li text="Water and Sanitation" href={links.waterSanitation} />
+                      <Li
+                        text="Water and Sanitation"
+                        href={links.waterSanitation}
+                      />
                     </ul>
                   </Li>
                   <Li
                     text="Get Involved"
                     href={links.getInvolved}
                     icon={<FaAngleRight />}
-                    className="!p-3 group"
+                    className=" group"
                     linkClass="gap-x-3"
                   >
-                    <ul className="absolute w-60 top-0 left-full translate-x-2 bg-[#202020] rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible hover:visible hover:opacity-100 duration-300 flex flex-col gap-y-2 z-50 p-2">
+                    <ul className="absolute w-60 top-0 left-full translate-x-2 bg-[#202020ee] rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible hover:visible hover:opacity-100 duration-300 flex flex-col gap-y-2 z-50 p-2">
                       <Li text="Internships" href={links.internships} />
                       <Li text="Volunteering" href={links.volunteering} />
                     </ul>
@@ -149,7 +155,6 @@ const MainHeader = () => {
                 </ul>
               </Li>
               <Li text="News & Articles" href={links.news} />
-              <Li text="Research / Publications" href={links.publications} />
               <Li
                 text="Support "
                 icon={<FaAngleDown />}
@@ -158,7 +163,7 @@ const MainHeader = () => {
                 onClick={() => toggleDropdown("support")}
               >
                 <ul
-                  className={`absolute w-60 top-full bg-[#202020] rounded-md   duration-300 flex flex-col gap-y-2 z-50 p-2 ${
+                  className={`absolute w-60 top-full bg-[#202020ee] rounded-md   duration-300 flex flex-col gap-y-2 z-50 p-2 ${
                     activeDropdown === "support"
                       ? "visible opacity-100"
                       : "invisible opacity-0"
@@ -168,12 +173,18 @@ const MainHeader = () => {
                     text="Our Network  "
                     icon={<FaAngleRight />}
                     href={links.ourNetwork}
-                    className="!p-3 group"
+                    className=" group"
                     linkClass="gap-x-3"
                   >
-                    <ul className="absolute w-60 top-0 left-full translate-x-2 bg-[#202020] rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible hover:visible hover:opacity-100 duration-300 flex flex-col gap-y-2 z-50 p-2">
-                      <Li text="National Network" href={links.nationalNetwork} />
-                      <Li text="International Network" href={links.internationalNetwork} />
+                    <ul className="absolute w-60 top-0 left-full translate-x-2 bg-[#202020ee] rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible hover:visible hover:opacity-100 duration-300 flex flex-col gap-y-2 z-50 p-2">
+                      <Li
+                        text="National Network"
+                        href={links.nationalNetwork}
+                      />
+                      <Li
+                        text="International Network"
+                        href={links.internationalNetwork}
+                      />
                     </ul>
                   </Li>
                   <Li text="Partner" href={links.partner} />
@@ -187,7 +198,7 @@ const MainHeader = () => {
                 onClick={() => toggleDropdown("training")}
               >
                 <ul
-                  className={`absolute w-60 top-full bg-[#202020] rounded-md   duration-300 flex flex-col gap-y-2 z-50 p-2 ${
+                  className={`absolute w-60 top-full bg-[#202020ee] rounded-md   duration-300 flex flex-col gap-y-2 z-50 p-2 ${
                     activeDropdown === "training"
                       ? "visible opacity-100"
                       : "invisible opacity-0"
@@ -199,8 +210,8 @@ const MainHeader = () => {
                   <Li text="Area Information" href={links.areaInfo} />
                 </ul>
               </Li>
-              <Li text="Contact Us" href={links.contactUs} />
               <Li text="Conference" href={links.conference} />
+              <Li text="Contact Us" href={links.contactUs} />
             </ul>
           </div>
         </Container>

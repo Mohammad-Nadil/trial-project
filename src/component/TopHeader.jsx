@@ -12,18 +12,17 @@ const TopHeader = () => {
   ];
 
   return (
-    <motion.div
-      className="top bg-primary"
-    >
-      <Container className="flex flex-col sm:flex-row items-center justify-between py-2 sm:py-4 px-3 xl:px-0">
-
+    <motion.div className="top bg-primary">
+      <Container className="flex flex-col sm:flex-row items-center justify-between py-2 sm:py-4 ">
         <motion.div
           className="text text-white font-inter"
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <p className="font-bold lg:text-xl">Change Needs Social Movement</p>
+          <p className=" font-inter font-bold lg:text-xl tracking-wide">
+            Change Needs Social Movement
+          </p>
         </motion.div>
         <motion.div
           className="link"
@@ -34,9 +33,9 @@ const TopHeader = () => {
             visible: {
               opacity: 1,
               transition: {
-                delay:1,
+                delay: 1,
                 staggerChildren: 0.4,
-                delayChildren: 0.4, 
+                delayChildren: 0.4,
               },
             },
           }}
