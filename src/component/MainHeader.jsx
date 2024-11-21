@@ -70,11 +70,11 @@ const MainHeader = () => {
   return (
     <>
       <div className="main bg-black">
-        <Container className="flex justify-between items-center px-3  py-3">
+        <Container className="flex justify-between items-center px-3  py-3 font-inter">
           <div className="logo">
             <img className=" w-full " src={logo} alt={logo} />
           </div>
-          <div className="menu morph">
+          <div className="menu morph font-inter">
             <ul className={` xl:flex  gap-x-1`}>
               <Li text="Home" href={links.home} />
               <Li text="About Us" href={links.aboutUs} />

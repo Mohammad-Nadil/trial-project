@@ -156,7 +156,7 @@ const ActivitySlider = () => {
   };
   return (
     <div className="xl:pt-32 md:pt-24 pt-16 overflow-hidden slider-container">
-      <HeadingText text="Activity" />
+      <HeadingText text="Activity" className="px-3" />
       <Slider {...settings}>
         {items.map((item, index) => (
           <div key={index}>

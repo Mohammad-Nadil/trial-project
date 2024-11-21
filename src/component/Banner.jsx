@@ -42,12 +42,11 @@ const Banner = () => {
           />
           <div className="left absolute  w-1/2 h-full  top-0 left-0 text-white font-inter flex justify-center items-center">
             <div className="text w-4/5 hidden sm:flex flex-col gap-y-3 sm:gap-y-6 glass py-0.5 sm:py-3 px-1 sm:px-5 ">
-              <h2 className="  md:text-xl font-semibold">
+              <h2 className="  md:text-xl font-inter font-semibold">
                 Lorem ipsum dolor sit, amet consectetur ?
               </h2>
               <p className="sm:w-10/12 text-xs md:text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
-                quia harum numquam itaque reiciendis veniam temporibus dolorem
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eos nemo voluptas impedit id odio dolores possimus non unde, illo temporibus iusto laborum maiores? Iure quidem corrupti saepe repudiandae deleniti.
                 
               </p>
             </div>

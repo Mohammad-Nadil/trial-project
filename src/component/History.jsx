@@ -34,10 +34,10 @@ const History = () => {
             className="text flex flex-col gap-y-4 text-[#2B2B2B] font-inter"
           >
             <motion.h2
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1, ease: "easeOut" }}
-              className="font-bold text-[2rem] leading-[2.4375rem]"
+              className="font-bold font-inter text-[2rem] leading-[2.4375rem]"
             >
               History and Achievements
             </motion.h2>

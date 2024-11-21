@@ -82,7 +82,7 @@ const MainHeaderSmall = () => {
         <div className="logo w-1/2 sm:w-1/3">
           <img className=" w-full aspect-[335/100]" src={logo} alt={logo} />
         </div>
-        <div className="menu">
+        <div className="menu font-inter">
           <button
             className="text-white text-2xl "
             onClick={() => setMenu(!menu)}
