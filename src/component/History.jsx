@@ -14,8 +14,9 @@ const History = () => {
     >
       <Container className="xl:pt-32 md:pt-16 px-3 xl:px-0 flex gap-y-10 items-center flex-col-reverse lg:flex-row">
         <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1  }}
+          transition={{ duration:1}}
           className="left lg:w-1/2"
         >
           <img src={history} alt={history} />
@@ -33,16 +34,16 @@ const History = () => {
             className="text flex flex-col gap-y-4 text-[#2B2B2B] font-inter"
           >
             <motion.h2
-              initial={{ opacity: 0, y: -100 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 1, ease: "easeOut" }}
               className="font-bold text-[2rem] leading-[2.4375rem]"
             >
               History and Achievements
             </motion.h2>
             <motion.p
-              initial={{ opacity: 0, x: 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
               className="leading-8"
             >

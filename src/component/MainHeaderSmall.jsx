@@ -9,17 +9,16 @@ import { IoClose } from "react-icons/io5";
 const Li = ({ text, href, children, className, icon, onClick }) => {
   return (
     <li
+      
       className={`text-base font-inter text-white relative transition-all duration-300  border-b border-gray-700 `}
     >
-      <Link to={href} className={`flex items-center gap-x-0.5 ${className}`}>
-        {children}{" "}
-        <p
-          onClick={onClick}
-          className="flex w-full py-3 px-5 items-center gap-x-4"
-        >
-          {text} {icon}
-        </p>
+      <Link
+        to={href} onClick={onClick}
+        className={`flex !flex-row !items-center gap-x-4 py-3 px-5  ${className}`}
+      >
+        {text} {icon}
       </Link>
+      {children}
     </li>
   );
 };
@@ -63,7 +62,6 @@ const MainHeaderSmall = () => {
     internships: "/",
     volunteering: "/",
     news: "/",
-    publications: "/",
     support: "/",
     ourNetwork: "/",
     nationalNetwork: "/",
@@ -92,7 +90,7 @@ const MainHeaderSmall = () => {
             {menu ? <IoClose /> : <FaBars />}
           </button>
           <ul
-            className={`absolute top-full right-0 w-full sm:w-1/2 z-50 bg-[#252525] flex flex-col duration-300 overflow-y-auto scroll-y-auto scrollbar-hide ${
+            className={`absolute top-full right-0 w-full sm:w-1/2 z-50 bg-[#252525ee] flex flex-col duration-300 overflow-y-auto scroll-y-auto scrollbar-hide ${
               menu ? " opacity-100 visible" : "opacity-0 invisible"
             } `}
           >
@@ -195,13 +193,15 @@ const MainHeaderSmall = () => {
                     onClick={() => setInvolved(!involved)}
                     href={links.getInvolved}
                   >
-                    <div  className={` duration-300 pl-5 ${
+                    <div
+                      className={` duration-300 pl-5 ${
                         involved ? " opacity-100 h-auto" : "opacity-0 h-0 "
-                      }`}>
+                      }`}
+                    >
                       <ul>
-                    <Li text="Internships" href={links.internships} />
-                    <Li text="Volunteering" href={links.volunteering} />
-                  </ul>
+                        <Li text="Internships" href={links.internships} />
+                        <Li text="Volunteering" href={links.volunteering} />
+                      </ul>
                     </div>
                   </Li>
                 </ul>

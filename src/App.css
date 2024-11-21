@@ -13,11 +13,11 @@ body {
 
 @media (min-width: 320px) and (max-width: 1279px) {
   .morph li {
-    background: #252525;
+    background: #252525dd;
     box-shadow: inset -4px -4px 5px rgba(155, 154, 154, 0.1);
   }
   .morph .active {
-    background: #252525;
+    background: #252525dd;
     box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.6),
       inset -4px -4px 8px rgba(255, 255, 255, 0.1);
   }
