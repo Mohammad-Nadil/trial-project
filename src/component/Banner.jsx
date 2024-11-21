@@ -23,7 +23,7 @@ const Banner = () => {
   let imgs = [slider1, slider3];
 
   return (
-    <div className=" relative">
+    <div className=" relative overflow-hidden">
       <Slider {...settings}>
         {imgs.map((item) => (
           <div className="div !w-screen aspect-[1920/920]">
