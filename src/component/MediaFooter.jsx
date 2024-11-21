@@ -50,7 +50,7 @@ const MediaFooter = () => {
       y: 0,
       transition: {
         duration: 1,
-        staggerChildren: 0.3, // Delay each child animation
+        staggerChildren: 0.3,
       },
     },
   };
@@ -75,7 +75,6 @@ const MediaFooter = () => {
               key={index}
               variants={itemVariants}
               whileHover={{
-                scale: 1.1,
                 transition: { duration: 0.3 },
               }}
             >
