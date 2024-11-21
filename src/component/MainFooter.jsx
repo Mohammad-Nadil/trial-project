@@ -54,21 +54,18 @@ const MainFooter = () => {
           variants={listVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }} 
+          viewport={{ once: true }}
         >
           <p className="font-bold text-lg left-5">What We Do</p>
           {WeDoLinks.map((item, index) => (
-            <motion.li
-              key={index}
-              variants={itemVariants}
-              whileHover={{
-                scale: 1.1, 
-                color: "#13FF00", 
-                transition: { duration: 0.3 },
-              }}
+            <motion.li key={index} variants={itemVariants}>
+            <Link
+              className="hover:text-[#13FF00] duration-300"
+              to={item.link}
             >
-              <Link to={item.link}>{item.text}</Link>
-            </motion.li>
+              {item.text}
+            </Link>
+          </motion.li>
           ))}
         </motion.ul>
         <motion.ul
@@ -80,16 +77,13 @@ const MainFooter = () => {
         >
           <p className="font-bold text-lg left-5">Media Center</p>
           {MediaCenterLinks.map((item, index) => (
-            <motion.li
-              key={index}
-              variants={itemVariants}
-              whileHover={{
-                scale: 1.1,
-                color: "#13FF00",
-                transition: { duration: 0.3 },
-              }}
-            >
-              <Link to={item.link}>{item.text}</Link>
+            <motion.li key={index} variants={itemVariants}>
+              <Link
+                className="hover:text-[#13FF00] duration-300"
+                to={item.link}
+              >
+                {item.text}
+              </Link>
             </motion.li>
           ))}
         </motion.ul>
@@ -102,17 +96,14 @@ const MainFooter = () => {
         >
           <p className="font-bold text-lg left-5">WBB Trust</p>
           {WBBTrustLinks.map((item, index) => (
-            <motion.li
-              key={index}
-              variants={itemVariants}
-              whileHover={{
-                scale: 1.1,
-                color: "#13FF00",
-                transition: { duration: 0.3 },
-              }}
+            <motion.li key={index} variants={itemVariants}>
+            <Link
+              className="hover:text-[#13FF00] duration-300"
+              to={item.link}
             >
-              <Link to={item.link}>{item.text}</Link>
-            </motion.li>
+              {item.text}
+            </Link>
+          </motion.li>
           ))}
         </motion.ul>
       </Container>

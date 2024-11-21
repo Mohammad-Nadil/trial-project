@@ -3,7 +3,7 @@ import HeadingText from "./layer/HeadingText";
 import Container from "./layer/Container";
 import CustomBtn from "./layer/CustomBtn";
 import pic from "../assets/research.png";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
 const Accordion = ({ id, title, text, isOpen, onToggle }) => {
@@ -79,7 +79,13 @@ const Research = () => {
     <div className="xl:pt-32 md:pt-24 pt-16 overflow-x-hidden">
       <HeadingText text="Research & Publication" />
       <Container className="flex px-3 xl:px-0 xl:p-0">
-        <div className="leaf p-5 lg:p-0 w-full lg:w-1/2 flex flex-col xl gap-y-10 2xl:gap-y-16">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="leaf p-5 lg:p-0 w-full lg:w-1/2 flex flex-col xl gap-y-10 2xl:gap-y-16"
+        >
           {accordions.map((accordion) => (
             <Accordion
               key={accordion.id}
@@ -93,7 +99,7 @@ const Research = () => {
           <div>
             <CustomBtn text="View All" className="font-normal !bg-white/50" />
           </div>
-        </div>
+        </motion.div>
         <motion.div className="right absolute h-full w-full -z-10 lg:static lg:w-1/2 blur-[3px] lg:blur-none">
           <motion.div
             initial={{ opacity: 0, x: 100 }}
