@@ -61,13 +61,13 @@ const MediaSlider = () => {
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <div className="slider-container overflow-hidden ">
-      <HeadingText text="Articles" className="py-6" />
+    <div className="slider-container  ">
+      <HeadingText text="Articles" className="py-6 px-0 sm:px-3 " />
       <Slider {...settings}>
         {items.map((item, index) => (
           <div key={index}>
             <SliderCard
-              className="border-none w-[80vw] sm:w-auto"
+              className="border-none w-[90vw] sm:w-auto"
               image={item.image}
               text={item.text}
             />

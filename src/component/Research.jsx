@@ -22,7 +22,7 @@ const Research = () => {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 , delay:0.5 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
             className="head flex flex-col text-white lg:text-black gap-y-3.5"
           >
@@ -37,14 +37,14 @@ const Research = () => {
               control and on the polythene bag ban. Since then we have evolved
               to have about twenty staff working in three departments: Health
               Rights, Livable Cities, and Economic & Social Justice. Our focus
-              on encouraging a positive outlook and involving many people in
-              the work has continued. Download
+              on encouraging a positive outlook and involving many people in the
+              work has continued. Download
             </p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 ,delay:0.5}}
+            transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
             className="highlight flex flex-col gap-y-4 md:gap-y-8 2xl:gap-y-10"
           >
@@ -52,20 +52,18 @@ const Research = () => {
             <HighP text="Expansion of tobacco cultivation and influence of the company" />
             <HighP text="Expansion of tobacco cultivation and influence of the company" />
           </motion.div>
-          <div
-           
-          >
-            <CustomBtn text="View All" className="font-normal !bg-white/50" />
+          <div>
+            <CustomBtn text="View All" className="font-normal !bg-white/50 " />
           </div>
         </div>
-        <motion.div
-         
-          className="right absolute h-full w-full -z-10 lg:static lg:w-1/2 blur-[3px] lg:blur-none"
-        >
-          <motion.div  initial={{ opacity: 0,x:100, }}
-          whileInView={{ opacity: 1,x:0, }}
-          transition={{ duration: 0.8 , delay:0.5 }}
-          viewport={{ once: true }} className="absolute h-full w-full">
+        <motion.div className="right absolute h-full w-full -z-10 lg:static lg:w-1/2 blur-[3px] lg:blur-none">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="absolute h-full w-full"
+          >
             <img className="w-full h-full lg:ml-14" src={pic} alt="Research" />
           </motion.div>
         </motion.div>
