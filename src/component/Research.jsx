@@ -17,7 +17,7 @@ const Research = () => {
   return (
     <div className="xl:pt-32 md:pt-24 pt-16 overflow-x-hidden">
       <HeadingText text="Research & Publication" />
-      <Container className="flex px-3 xl:px-0 xl:p-0">
+      <Container className="flex px-3 2xl:px-0 xl:p-0">
         <div className="leaf p-5 lg:p-0 w-full lg:w-1/2 flex flex-col xl gap-y-10 2xl:gap-y-16 ">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -26,7 +26,7 @@ const Research = () => {
             viewport={{ once: true }}
             className="head flex flex-col text-white lg:text-black gap-y-3.5"
           >
-            <h2 className="font-inter font-bold text-[2.0625rem] leading-10 w-96">
+            <h2 className="font-inter font-bold text-[2.0625rem] leading-10  sm:w-96">
               WBB's Twenty Years Celebrating Book
             </h2>
             <p className="font-inter text-sm sm:text-base">
@@ -56,7 +56,7 @@ const Research = () => {
             <CustomBtn text="View All" className="font-normal !bg-white/50 " />
           </div>
         </div>
-        <motion.div className="right absolute h-full w-full -z-10 lg:static lg:w-1/2 blur-[3px] lg:blur-none">
+        <motion.div className="right absolute h-full w-[95%] -z-10 lg:static lg:w-1/2 blur-[2px] lg:blur-none">
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}

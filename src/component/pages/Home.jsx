@@ -8,7 +8,7 @@ import Media from "../Media";
 
 const Home = () => {
   return (
-    <div className="">
+    <div className=" ">
       <Banner />
       <History />
       <ActivitySlider />
