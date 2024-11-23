@@ -13,7 +13,7 @@ const Banner = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     speed: 1000,
     fade: true,
     autoplaySpeed: 2500,

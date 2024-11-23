@@ -47,7 +47,7 @@ const MainFooter = () => {
   };
 
   return (
-    <div className="bg-black py-11 md:py-[88px]">
+    <div className="bg-black py-11 md:py-[88px] px-3 2xl:px-0">
       <Container className="font-inter text-white flex justify-between px-3 xl:px-0 flex-wrap sm:flex-nowrap gap-y-16">
         <motion.ul
           className="flex flex-col gap-y-5"

@@ -14,7 +14,7 @@ const Copyright = () => {
   };
 
   return (
-    <div className="bg-primary">
+    <div className="bg-primary px-3 2xl:px-0">
       <Container className="py-5 md:py-9 text-sm text-white leading-4 flex justify-between sm:items-center flex-col gap-y-3 sm:flex-row px-3 xl:px-0">
         <motion.p
           variants={textVariants}

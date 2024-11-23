@@ -12,7 +12,7 @@ const History = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <Container className="xl:pt-32 md:pt-16 px-3 xl:px-0 flex gap-y-10 items-center flex-col-reverse lg:flex-row">
+      <Container className="xl:pt-32 md:pt-16 px-3 2xl:px-0 flex gap-y-10 items-center flex-col-reverse lg:flex-row">
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1  }}

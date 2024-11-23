@@ -61,7 +61,7 @@ const MediaFooter = () => {
   };
 
   return (
-    <div className="bg-[#EDF3F6]">
+    <div className="bg-[#EDF3F6] px-3">
       <Container>
         <motion.ul
           className="flex sm:justify-center sm:items-center gap-x-8 md:gap-x-11 gap-y-3 py-4 sm:py-9 px-3 flex-col sm:flex-row"

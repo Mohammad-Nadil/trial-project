@@ -9,8 +9,8 @@ const SliderCard = ({ className, href, text, image }) => {
     <div
       className={`z-[9] border aspect-[466/552] relative  group mx-1 md:mx-2  2xl:mx-3 group ${className}`}
     >
-      <div className="absolute w-full h-full -z-10">
-        <img className="w-full h-full object-cover" src={image} alt={image} />
+      <div className="absolute w-full h-full -z-10 overflow-hidden">
+        <img className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 duration-1000" src={image} alt={image} />
       </div>
       <div className=" relative w-full h-full">
         <img
@@ -25,7 +25,7 @@ const SliderCard = ({ className, href, text, image }) => {
         />
       </div>
       <div className="  h-1/3  py-4 px-6 flex flex-col  absolute bottom-0 md:justify-around z-50 justify-center  after:w-[87%] after:h-0.5 after:absolute after:bottom-[90%] after:bg-primary after:opacity-0 after:duration-300 group-hover:after:opacity-100 bg-gradient-to-t after:z-50 ">
-        <p className="text-white font-bold text-base   xl:text-base  font-inter relative z-50">
+        <p className="text-white font-bold text-base lg:t/ext-sm   xl:text-base  font-inter relative z-50">
           {text}
         </p>
         <div

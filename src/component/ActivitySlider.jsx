@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import SliderCard from "./layer/SliderCard";
 import Container from "./layer/Container";
-import sliderCardPic1 from "../assets/celebrate.png";
+import sliderCardPic1 from "../assets/placeholder3.jpeg";
 import sliderCardPic2 from "../assets/lgd.png";
 import sliderCardPic3 from "../assets/oldDhaka.png";
 import HeadingText from "./layer/HeadingText";

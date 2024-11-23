@@ -51,17 +51,17 @@ const Media = () => {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.8,
-        ease: "easeOut",
+        duration: 1,
+        ease: "liner",
         type: "spring",
-        stiffness: 300,
+        stiffness: 200,
       },
     },
   };
 
   return (
-    <div className="media-bg mt-80">
-      <Container className="px-3 xl:px-0 py-14 flex flex-col lg:flex-row">
+    <div className="media-bg mt-80 px-3 2xl:px-0">
+      <Container className=" xl:px-0 py-14 flex flex-col lg:flex-row">
         <motion.div
           className="left w-full lg:w-1/2 aspect-[9/10]  sm:aspect-video lg:aspect-auto relative"
           initial={{ opacity: 0, x: -50 }}

@@ -76,9 +76,9 @@ const Research = () => {
   ];
 
   return (
-    <div className="xl:pt-32 md:pt-24 pt-16 overflow-x-hidden">
+    <div className="xl:pt-32 md:pt-24 pt-16 overflow-x-hidden px-3 2xl:px-0">
       <HeadingText text="Research & Publication" />
-      <Container className="flex px-3 xl:px-0 xl:p-0">
+      <Container className="flex  2xl:px-0 xl:p-0">
       <motion.div
   initial={{ opacity: 0, y: 100 }}
   whileInView={{ opacity: 1, y: 0 }}
