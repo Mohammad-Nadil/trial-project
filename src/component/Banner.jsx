@@ -46,22 +46,24 @@ const Banner = () => {
                 Lorem ipsum dolor sit, amet consectetur ?
               </h2>
               <p className="sm:w-10/12 text-xs md:text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eos nemo voluptas impedit id odio dolores possimus non unde, illo temporibus iusto laborum maiores? Iure quidem corrupti saepe repudiandae deleniti.
-                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore eos nemo voluptas impedit id odio dolores possimus non
+                unde, illo temporibus iusto laborum maiores? Iure quidem
+                corrupti saepe repudiandae deleniti.
               </p>
             </div>
           </div>
           <div className=" right absolute w-full sm:w-1/2 h-full  top-0 right-0 flex justify-center items-center">
             <div className=" w-10/12 sm:w-11/12 aspect-video flex flex-col gap-y-8  py-3 px-5">
-              <iframe
-              className="w-full h-full rounded-2xl  "
+              {/* <iframe
+                className="w-full h-full rounded-2xl  "
                 src="https://www.youtube.com/embed/Nj7gIvemj2s?si=Y4ZRGmbpHKFmV7lB"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
-              ></iframe>
+              ></iframe> */}
             </div>
           </div>
         </div>
