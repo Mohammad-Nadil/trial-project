@@ -9,7 +9,7 @@ import { FaMinus, FaPlus } from "react-icons/fa";
 const Accordion = ({ id, title, text, isOpen, onToggle }) => {
   return (
     <div
-      className={`${
+      className={`overflow-hidden ${
         isOpen ? "bg-[#E7E7E7]/60 lg:bg-transparent" : "hover:bg-gray-300"
       }`}
     >
@@ -30,19 +30,19 @@ const Accordion = ({ id, title, text, isOpen, onToggle }) => {
           )}
         </div>
       </div>
-      {isOpen && (
-        <motion.div
-          initial={{ height: 0, opacity: 0 }}
-          animate={{ height: "auto", opacity: 1 }}
-          exit={{ height: 0, opacity: 0 }}
-          className="overflow-hidden px-6 py-4"
-        >
+      <div
+        className={`transition-all duration-500 ease-in-out overflow-hidden ${
+          isOpen ? "max-h-[500px]" : "max-h-0"
+        }`}
+      >
+        <div className={`px-6 py-4`}>
           <p className="text-sm md:text-lg leading-7">{text}</p>
-        </motion.div>
-      )}
+        </div>
+      </div>
     </div>
   );
 };
+
 
 const Research = () => {
   const [activeAccordion, setActiveAccordion] = useState(null);
@@ -79,42 +79,42 @@ const Research = () => {
     <div className="xl:pt-32 md:pt-24 pt-16 overflow-x-hidden px-3 2xl:px-0">
       <HeadingText text="Research & Publication" />
       <Container className="flex  2xl:px-0 xl:p-0">
-      <motion.div
-  initial={{ opacity: 0, y: 100 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.5 }}
-  viewport={{ once: true }}
-  className="leaf p-5 lg:p-0 w-full lg:w-1/2 flex flex-col xl gap-y-10 2xl:gap-y-16"
->
-  {accordions.map((accordion, index) => (
-    <motion.div
-      key={accordion.id}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{
-        duration: 0.5,
-        delay: 0.5 + index * 0.3, // Adding stagger delay manually
-      }}
-      viewport={{ once: true }}
-    >
-      <Accordion
-        id={accordion.id}
-        title={accordion.title}
-        text={accordion.text}
-        isOpen={activeAccordion === accordion.id}
-        onToggle={handleToggle}
-      />
-    </motion.div>
-  ))}
-  <motion.div
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay: 0.5 + accordions.length * 0.3 }}
-    viewport={{ once: true }}
-  >
-    <CustomBtn text="View All" className="font-normal !bg-white/50" />
-  </motion.div>
-</motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="leaf p-5 lg:p-0 w-full lg:w-1/2 flex flex-col xl gap-y-10 2xl:gap-y-16"
+        >
+          {accordions.map((accordion, index) => (
+            <motion.div
+              key={accordion.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: 0.5 + index * 0.3, // Adding stagger delay manually
+              }}
+              viewport={{ once: true }}
+            >
+              <Accordion
+                id={accordion.id}
+                title={accordion.title}
+                text={accordion.text}
+                isOpen={activeAccordion === accordion.id}
+                onToggle={handleToggle}
+              />
+            </motion.div>
+          ))}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 + accordions.length * 0.3 }}
+            viewport={{ once: true }}
+          >
+            <CustomBtn text="View All" className="font-normal !bg-white/50" />
+          </motion.div>
+        </motion.div>
         <motion.div className="right absolute h-full w-full -z-10 lg:static lg:w-1/2 blur-[3px] lg:blur-none">
           <motion.div
             initial={{ opacity: 0, x: 100 }}
